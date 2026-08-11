@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-feature-settings: "palt" 1;
+}
+
+/* ハイライトマーク共通 */
+mark {
+  border-radius: 2px;
+  padding: 0 1px;
+  cursor: pointer;
+  transition: outline-color 0.15s ease;
+  outline: 2px solid transparent;
+  outline-offset: 1px;
+}
+
+mark.severity-ERROR {
+  background-color: #fdecea;
+  color: #c9372c;
+  text-decoration: underline wavy #c9372c;
+}
+
+mark.severity-WARNING {
+  background-color: #fff6e0;
+  color: #9a6b00;
+  text-decoration: underline wavy #9a6b00;
+}
+
+mark.severity-TYPO {
+  background-color: #e8f1fb;
+  color: #1c5fa8;
+  text-decoration: underline wavy #1c5fa8;
+}
+
+mark.is-active {
+  outline-color: currentColor;
+}
+
+::selection {
+  background: #c9dcea;
+}
